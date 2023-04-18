@@ -1,11 +1,11 @@
-About dask-cuda
-===============
+About dask-cuda-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dask-cuda-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rapidsai/dask-cuda
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dask-cuda-feedstock/blob/main/LICENSE.txt)
 
 Summary: Utilities for Dask and CUDA interactions
 
