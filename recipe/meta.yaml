@@ -19,14 +19,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - setuptools >=64.0.0
       # tomli should be less py<3.11
     - tomli
     - versioneer >=0.24
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - dask-core ==2023.3.2
     - distributed ==2023.3.2.1
     - dask ==2023.3.2
