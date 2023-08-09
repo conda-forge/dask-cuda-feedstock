@@ -23,7 +23,6 @@ requirements:
     - setuptools >=64.0.0
       # tomli should be less py<3.11
     - tomli
-    - versioneer >=0.24
     - pip
   run:
     - python >=3.9
