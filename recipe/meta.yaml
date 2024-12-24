@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dask-cuda-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dask-cuda-{{ version }}.tar.gz
   sha256: 9748c22811c7a2636debf96ec7ef5c368f28228e2ae7f86c59422b1a833971f0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -19,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=64.0.0
       # tomli should be less py<3.11
     - tomli
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - dask-core ==2023.9.2
     - distributed ==2023.9.2
     - dask ==2023.9.2
@@ -51,6 +51,7 @@ test:
     - dask cuda config --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/rapidsai/dask-cuda
