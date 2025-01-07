@@ -12,7 +12,7 @@ source:
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - dask-cuda-worker = dask_cuda.cli:worker
     - dask-cuda-config = dask_cuda.cli:config
